@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+   <style>
+       body {background-color:white}
+       
+   #Menu1 a.static{
+           color:black;
+       }
+       .auto-style3 {
+           width: 428px;
+           height: 0px;
+       }
+       .auto-style4 {
+           width: 194px;
+           height: 36px;
+       }
+       .auto-style5 {
+           background-color: #000000
+       }
+   </style>
+    <title></title>
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+      
+
+
+    <div>
+                <div class="auto-style3">    
+                    <img alt="" class="auto-style4" src="images/Prada-new%20one.jpg" /><br />
+        </div>
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" STYLE="padding-top:40px; color:black" OnMenuItemClick="Menu1_MenuItemClick" CssClass="" >
+            <Items>
+                   <asp:MenuItem  Text="Home" Value="Home"  NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                <asp:MenuItem Text="Sign Up" Value="Sign Up" NavigateUrl="~/SignUp.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                   <asp:MenuItem NavigateUrl="~/LogIn.aspx" Text="Log In" Value="Log In"></asp:MenuItem>
+                   <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                   <asp:MenuItem NavigateUrl="~/AboutUs.aspx" Text="About Us" Value="About Us"></asp:MenuItem>
+                   <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                   <asp:MenuItem Text="Contact Us" Value="Contact Us" NavigateUrl="~/ContactUs.aspx"></asp:MenuItem>
+                   <asp:MenuItem Text="|" Value="|"></asp:MenuItem>
+                <asp:MenuItem Text="Exit" Value="Exit" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <p>
+            </p>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </form>
+</body>
+</html>
